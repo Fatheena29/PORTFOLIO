@@ -466,20 +466,23 @@ main {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
   main {
     margin-left: 260px;
+    width: calc(100% - 260px);
+    max-width: calc(100% - 260px);
     padding-top: 0 !important;
   }
   section {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
   footer {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 
@@ -495,9 +498,13 @@ main {
     box-shadow: 10px 0 40px rgba(0, 0, 0, 0.3);
   }
   main {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
     padding-top: 70px !important;
   }
 }
+
 
 /* ═══════════════════════════════════════════════════════════════════
    HERO SECTION
@@ -611,12 +618,15 @@ main {
 /* Hero Grid Layout */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 30px 40px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 20px 40px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
   align-items: center;
+}
+.hero-grid > div:first-child {
+  min-width: 0;
 }
 
 .role-pill {
@@ -634,12 +644,13 @@ main {
 
 .hero-title-new {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-size: clamp(2.1rem, 3.8vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   margin-bottom: 14px;
   color: var(--text-primary);
+  word-break: break-word;
 }
 .hero-title-new span.gradient {
   background: var(--grad-1);
@@ -647,6 +658,7 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .hero-subrole {
   font-size: 1rem;
@@ -767,18 +779,19 @@ main {
 
 .orbital-container {
   position: relative;
-  width: 380px;
-  height: 380px;
+  width: 350px;
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 /* Center Avatar Profile Ring */
 .profile-center-ring {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 205px;
+  height: 205px;
   border-radius: 50%;
   padding: 4px;
   background: var(--profile-ring-grad);
@@ -812,15 +825,16 @@ main {
 }
 
 .orbit-track-1 {
-  width: 290px;
-  height: 290px;
+  width: 265px;
+  height: 265px;
   animation: spin-clockwise 26s linear infinite;
 }
 .orbit-track-2 {
-  width: 360px;
-  height: 360px;
+  width: 335px;
+  height: 335px;
   animation: spin-counter-clockwise 36s linear infinite;
 }
+
 
 /* Orbit dots */
 .orbit-dot {
@@ -1023,12 +1037,19 @@ main {
   font-weight: 500;
 }
 
+@media (max-width: 1240px) {
+  .stats-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 30px;
     text-align: center;
   }
+
   .hero-desc-new {
     margin-left: auto;
     margin-right: auto;
