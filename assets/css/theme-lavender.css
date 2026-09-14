@@ -1,0 +1,75 @@
+/* ------------------------------------------------*/
+/* Lavender Theme Override */
+/* ------------------------------------------------*/
+:root {
+  /* light lavender */
+  --base--light: #F5F3FF;
+  --base-tint--light: #FFFFFF;
+  --base-shade--light: #EAE6FF;
+  --accent--light: #7C3AED;
+  --secondary--light: #C084FC;
+  --secondary-rgba--light: rgba(192, 132, 252, 0.2);
+  --stroke-controls--light: #DDD6FE;
+  --stroke-controls-neutral--light: rgba(124, 58, 237, 0.15);
+  --stroke-elements--light: #EDE9FE;
+  --t-bright--light: #2E1065;
+  --t-medium--light: #5B21B6;
+  --t-muted--light: #7C3AED;
+  --t-accent--light: #7C3AED;
+  --t-secondary--light: #C084FC;
+  --t-disabled--light: #A78BFA;
+  --t-placeholder--light: #C4B5FD;
+  --base-opp--light: #2E1065;
+  --t-opp-bright--light: #F5F3FF;
+  --t-opp-medium--light: #A78BFA;
+  --t-opp-muted--light: #7C3AED;
+  --gradient-one--light: #7C3AED;
+  --gradient-two--light: #C084FC;
+  --gradient-three--light: #A78BFA;
+
+  /* dark lavender */
+  --base--dark: #0D0A1A;
+  --base-tint--dark: #160F2E;
+  --base-shade--dark: #07040F;
+  --accent--dark: #A78BFA;
+  --secondary--dark: #E879F9;
+  --secondary-rgba--dark: rgba(232, 121, 249, 0.2);
+  --stroke-controls--dark: #2D1F5E;
+  --stroke-controls-neutral--dark: rgba(167, 139, 250, 0.15);
+  --stroke-elements--dark: #1E1540;
+  --t-bright--dark: #F5F3FF;
+  --t-medium--dark: #C4B5FD;
+  --t-muted--dark: #8B5CF6;
+  --t-accent--dark: #A78BFA;
+  --t-secondary--dark: #E879F9;
+  --t-disabled--dark: #4C3A8A;
+  --t-placeholder--dark: #3B2D6E;
+  --base-opp--dark: #F5F3FF;
+  --t-opp-bright--dark: #0D0A1A;
+  --t-opp-medium--dark: #4C3A8A;
+  --t-opp-muted--dark: #6D4FC2;
+  --gradient-one--dark: #7C3AED;
+  --gradient-two--dark: #E879F9;
+  --gradient-three--dark: #A78BFA;
+}
+
+/* SVG background blobs — lavender tones */
+.bg01 { fill: url(#color-gradient); }
+.bg02 { fill: url(#color-gradient-2); }
+
+/* Scrollbar lavender */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7C3AED 0%, #C084FC 100%);
+}
+
+/* rounded-tag default colors */
+.rounded-tag {
+  background-color: var(--base-shade);
+  color: var(--t-medium);
+  border: 1px solid var(--stroke-elements);
+}
+.rounded-tag.opposite {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+}
