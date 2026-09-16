@@ -939,8 +939,8 @@ main {
   box-shadow: 0 4px 18px rgba(247, 223, 30, 0.2);
 }
 .badge-git {
-  left: 22%;
-  top: 6px;
+  right: 15px;
+  bottom: 22%;
   animation: hover-git 6s ease-in-out infinite alternate;
   border-color: rgba(240, 80, 50, 0.4);
   box-shadow: 0 4px 18px rgba(240, 80, 50, 0.2);
@@ -1139,8 +1139,8 @@ main {
     height: 13px;
   }
   .badge-git {
-    left: 18%;
-    top: 2px;
+    right: 2px;
+    bottom: 16%;
   }
   .badge-php {
     right: 2px;
