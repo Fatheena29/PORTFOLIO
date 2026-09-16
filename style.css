@@ -911,11 +911,11 @@ main {
   box-shadow: 0 4px 18px rgba(232, 121, 249, 0.15);
 }
 .badge-mysql {
-  right: 15px;
-  bottom: 22%;
+  right: 12px;
+  bottom: 18%;
   animation: hover-mysql 6s ease-in-out infinite alternate;
-  border-color: rgba(245, 158, 11, 0.3);
-  box-shadow: 0 4px 18px rgba(245, 158, 11, 0.15);
+  border-color: rgba(0, 117, 143, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 117, 143, 0.2);
 }
 .badge-ai {
   left: 35px;
@@ -923,6 +923,34 @@ main {
   animation: hover-ai 6s ease-in-out infinite alternate;
   border-color: rgba(16, 185, 129, 0.3);
   box-shadow: 0 4px 18px rgba(16, 185, 129, 0.15);
+}
+.badge-php {
+  right: 10px;
+  top: 12%;
+  animation: hover-php 6s ease-in-out infinite alternate;
+  border-color: rgba(119, 123, 180, 0.4);
+  box-shadow: 0 4px 18px rgba(119, 123, 180, 0.2);
+}
+.badge-js {
+  left: 4px;
+  top: 40%;
+  animation: hover-js 6s ease-in-out infinite alternate;
+  border-color: rgba(247, 223, 30, 0.4);
+  box-shadow: 0 4px 18px rgba(247, 223, 30, 0.2);
+}
+.badge-git {
+  left: 22%;
+  top: 6px;
+  animation: hover-git 6s ease-in-out infinite alternate;
+  border-color: rgba(240, 80, 50, 0.4);
+  box-shadow: 0 4px 18px rgba(240, 80, 50, 0.2);
+}
+.badge-tailwind {
+  left: 20px;
+  bottom: 10%;
+  animation: hover-tailwind 6s ease-in-out infinite alternate;
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.2);
 }
 
 @keyframes spin-clockwise {
@@ -943,11 +971,27 @@ main {
 }
 @keyframes hover-mysql {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(8px, 10px); }
+  100% { transform: translate(6px, 8px); }
 }
 @keyframes hover-ai {
   0% { transform: translate(0, 0); }
   100% { transform: translate(-6px, 8px); }
+}
+@keyframes hover-php {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(4px, -8px); }
+}
+@keyframes hover-js {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-6px, 6px); }
+}
+@keyframes hover-git {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, -6px); }
+}
+@keyframes hover-tailwind {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-4px, 6px); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1085,6 +1129,35 @@ main {
   }
   .orbit-track-1 { width: 230px; height: 230px; }
   .orbit-track-2 { width: 280px; height: 280px; }
+  .orbit-badge {
+    padding: 5px 9px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+  .orbit-badge svg {
+    width: 13px;
+    height: 13px;
+  }
+  .badge-git {
+    left: 18%;
+    top: 2px;
+  }
+  .badge-php {
+    right: 2px;
+    top: 10%;
+  }
+  .badge-mysql {
+    right: 2px;
+    bottom: 16%;
+  }
+  .badge-js {
+    left: 0px;
+    top: 38%;
+  }
+  .badge-tailwind {
+    left: 10px;
+    bottom: 8%;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
