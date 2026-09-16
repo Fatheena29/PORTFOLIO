@@ -765,6 +765,11 @@ main {
   width: 15px;
   height: 15px;
 }
+.tech-chip-small img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
 
 /* ═══════════════════════════════════════════════════════════════════
    ORBITAL AVATAR VISUAL (Matches Reference)
@@ -873,13 +878,13 @@ main {
   position: absolute;
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 14px;
+  gap: 8px;
+  padding: 8px 14px;
   background: var(--orbit-badge-bg);
   border: 1px solid var(--orbit-badge-border);
-  border-radius: 10px;
-  font-size: 0.82rem;
-  font-weight: 700;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--text-primary);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(12px);
@@ -888,69 +893,54 @@ main {
   transition: var(--transition);
 }
 .orbit-badge:hover {
-  transform: scale(1.06);
+  background: var(--bg-card-hover);
   border-color: var(--accent-cyan);
+  transform: scale(1.05);
+}
+.orbit-badge img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 .orbit-badge svg {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
 }
 
-.badge-python {
-  right: 15px;
-  top: 12%;
-  animation: hover-python 6s ease-in-out infinite alternate;
-  border-color: rgba(2, 132, 199, 0.3);
-  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.15);
-}
-.badge-opencv {
-  left: 10px;
-  top: 42%;
-  animation: hover-opencv 6s ease-in-out infinite alternate;
-  border-color: rgba(232, 121, 249, 0.3);
-  box-shadow: 0 4px 18px rgba(232, 121, 249, 0.15);
-}
-.badge-mysql {
-  right: 12px;
-  bottom: 18%;
-  animation: hover-mysql 6s ease-in-out infinite alternate;
-  border-color: rgba(0, 117, 143, 0.4);
-  box-shadow: 0 4px 18px rgba(0, 117, 143, 0.2);
-}
-.badge-ai {
-  left: 35px;
-  bottom: 12%;
-  animation: hover-ai 6s ease-in-out infinite alternate;
-  border-color: rgba(16, 185, 129, 0.3);
-  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.15);
-}
 .badge-php {
-  right: 10px;
-  top: 12%;
+  left: 20px;
+  top: 42%;
   animation: hover-php 6s ease-in-out infinite alternate;
-  border-color: rgba(119, 123, 180, 0.4);
-  box-shadow: 0 4px 18px rgba(119, 123, 180, 0.2);
-}
-.badge-js {
-  left: 4px;
-  top: 40%;
-  animation: hover-js 6s ease-in-out infinite alternate;
-  border-color: rgba(247, 223, 30, 0.4);
-  box-shadow: 0 4px 18px rgba(247, 223, 30, 0.2);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
 }
 .badge-git {
-  right: 15px;
-  bottom: 22%;
+  right: 20px;
+  top: 15%;
   animation: hover-git 6s ease-in-out infinite alternate;
-  border-color: rgba(240, 80, 50, 0.4);
-  box-shadow: 0 4px 18px rgba(240, 80, 50, 0.2);
+  border-color: rgba(240, 80, 50, 0.35);
+  box-shadow: 0 4px 20px rgba(240, 80, 50, 0.15);
 }
-.badge-tailwind {
-  left: 20px;
-  bottom: 10%;
-  animation: hover-tailwind 6s ease-in-out infinite alternate;
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.2);
+.badge-mysql {
+  right: 20px;
+  bottom: 25%;
+  animation: hover-mysql 6s ease-in-out infinite alternate;
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+}
+.badge-js {
+  left: 55px;
+  bottom: 12%;
+  animation: hover-js 6s ease-in-out infinite alternate;
+  border-color: rgba(251, 191, 36, 0.3);
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.15);
+  padding: 8px;
+  border-radius: 8px;
+}
+.badge-js img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
 }
 
 @keyframes spin-clockwise {
@@ -961,37 +951,21 @@ main {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
 }
-@keyframes hover-python {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(6px, -10px); }
-}
-@keyframes hover-opencv {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-8px, -10px); }
-}
-@keyframes hover-mysql {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(6px, 8px); }
-}
-@keyframes hover-ai {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-6px, 8px); }
-}
 @keyframes hover-php {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(4px, -8px); }
-}
-@keyframes hover-js {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-6px, 6px); }
+  100% { transform: translate(-8px, -12px); }
 }
 @keyframes hover-git {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(0, -6px); }
+  100% { transform: translate(8px, -10px); }
 }
-@keyframes hover-tailwind {
+@keyframes hover-mysql {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(-4px, 6px); }
+  100% { transform: translate(8px, 12px); }
+}
+@keyframes hover-js {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-6px, 10px); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -1130,34 +1104,23 @@ main {
   .orbit-track-1 { width: 230px; height: 230px; }
   .orbit-track-2 { width: 280px; height: 280px; }
   .orbit-badge {
-    padding: 5px 9px;
-    font-size: 0.72rem;
-    gap: 5px;
+    padding: 6px 10px;
+    font-size: 0.74rem;
+    gap: 6px;
+  }
+  .orbit-badge img {
+    width: 12px;
+    height: 12px;
   }
   .orbit-badge svg {
     width: 13px;
     height: 13px;
   }
-  .badge-git {
-    right: 2px;
-    bottom: 16%;
-  }
-  .badge-php {
-    right: 2px;
-    top: 10%;
-  }
-  .badge-mysql {
-    right: 2px;
-    bottom: 16%;
-  }
-  .badge-js {
-    left: 0px;
-    top: 38%;
-  }
-  .badge-tailwind {
-    left: 10px;
-    bottom: 8%;
-  }
+  .badge-php { left: 10px; top: 40%; }
+  .badge-git { right: 10px; top: 12%; }
+  .badge-mysql { right: 10px; bottom: 20%; }
+  .badge-js { left: 40px; bottom: 10%; padding: 6px; }
+  .badge-js img { width: 18px; height: 18px; }
 }
 
 /* ═══════════════════════════════════════════════════════════════════
