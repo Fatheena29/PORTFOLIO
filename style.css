@@ -973,25 +973,26 @@ main {
    ═══════════════════════════════════════════════════════════════════ */
 
 .stats-bar {
-  grid-column: span 2;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 14px;
+  gap: 16px;
+  margin-top: 18px;
   width: 100%;
-  max-width: 1200px;
 }
 
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 18px 14px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   transition: var(--transition);
   box-shadow: var(--shadow-card);
+  width: 100%;
+  box-sizing: border-box;
 }
 .stat-card:hover {
   background: var(--bg-card-hover);
@@ -1004,8 +1005,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: rgba(16, 185, 129, 0.1);
   border: 1px solid rgba(16, 185, 129, 0.25);
@@ -1023,30 +1024,33 @@ main {
   color: #d946ef;
 }
 .stat-card-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 .stat-card-info {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
+  min-width: 0;
 }
 .stat-card-num {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.1;
 }
 .stat-card-label {
-  font-size: 0.74rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 @media (max-width: 1240px) {
   .stats-bar {
+    grid-column: 1 / -1;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1069,15 +1073,19 @@ main {
     justify-content: center;
   }
   .stats-bar {
-    grid-column: span 1;
+    grid-column: 1 / -1;
     grid-template-columns: repeat(2, 1fr);
   }
   .stats-bar .stat-card:last-child {
     grid-column: span 2;
   }
+  .stat-card-label {
+    white-space: normal;
+  }
 }
 @media (max-width: 540px) {
   .stats-bar {
+    grid-column: 1 / -1;
     grid-template-columns: 1fr;
   }
   .stats-bar .stat-card:last-child {
